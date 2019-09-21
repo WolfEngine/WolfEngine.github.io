@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="PooyaEimandar" />
+	<meta name="keywords" content="wolfengine, pooyaeimandar, cloud gaming, cloud streaming, google stadia, playpod, پویا ایماندار" />
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Raleway:300,400,500,600,700|Crete+Round:400i" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link rel="stylesheet" href="css/dark.css" type="text/css" />
+	<link rel="stylesheet" href="css/font-icons.css" type="text/css" />
+	<link rel="stylesheet" href="css/animate.css" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Welcome to WolfEngine</title>
+</head>
+
+<body class="stretched">
+	<div id="wrapper" class="clearfix">
+		<section id="slider" class="slider-element full-screen">
+			<div class="full-screen dark section nomargin noborder ohidden"> 
+				<div class="container clearfix">
+					<div id = "wolf_div" class="slider-caption slider-caption-center">
+					</div>
+				</div>
+				<div class="video-wrap">
+					<video id = "wolfvideo" poster="videos/explore.jpg" preload="auto" autoplay muted>
+						<source src='videos/barf.mp4' type='video/mp4' />
+						<source src='videos/explore.webm' type='video/webm' />
+					</video>
+					<div class="video-overlay" style="background-color: rgba(0,0,0,0.4);"></div>
+				</div>
+			</div>
+		</section>
+		<footer id="footer" class="dark">
+			<div id="copyrights">
+				<div class="container clearfix">
+					<div class="col_half">
+						<div><a>We are passionate about 3D Graphics Technology.</a></div>
+						Copyrights &copy; 2019 All Rights Reserved by <a href="https://PooyaEimandar.github.io">Pooya Eimandar</a>.<br>
+					</div>
+
+					<div class="col_half col_last tright">
+						<div class="fright clearfix">
+
+							<a href="https://www.linkedin.com/in/pooyaeimandar/" class="social-icon si-small si-borderless si-linkedin">
+								<i class="icon-linkedin"></i>
+								<i class="icon-linkedin"></i>
+							</a>
+
+							<a href="https://twitter.com/wolf_engine" class="social-icon si-small si-borderless si-twitter">
+								<i class="icon-twitter"></i>
+								<i class="icon-twitter"></i>
+							</a>
+
+							<a href="https://github.com/WolfEngine" class="social-icon si-small si-borderless si-github">
+								<i class="icon-github"></i>
+								<i class="icon-github"></i>
+							</a>
+
+							<a href="https://www.instagram.com/wolf_engine" class="social-icon si-small si-borderless si-instagram">
+								<i class="icon-instagram"></i>
+								<i class="icon-instagram"></i>
+							</a>
+
+							<a href="https://www.youtube.com/channel/UC5XZoDB5YHd07WSWeMAYyZQ" class="social-icon si-small si-borderless si-youtube">
+								<i class="icon-youtube"></i>
+								<i class="icon-youtube"></i>
+							</a>
+			
+						</div>
+						<div class="clear"></div>
+						<i class="icon-envelope2"></i> pooya@BaziPardaz.onMicrosoft.com <span class="middot">&middot;</span> <i class="icon-skype2"></i> PooyaEimandar
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="js/jquery.js"></script>
+	<script src="js/plugins.js"></script>
+	<script src="js/functions.js"></script>
+	<script type='text/javascript'>
+		document.getElementById('wolfvideo').addEventListener('ended', wolfvideo_handler, false);
+		function wolfvideo_handler(e) {
+			//create h2
+			var _el_h2 = document.createElement("h2");
+			var _text_node = document.createTextNode("Wolf Engine");
+			_el_h2.appendChild(_text_node);
+			
+			var _att_fade = document.createAttribute("data-animate");
+			_att_fade.value = "fadeInUp";
+			_el_h2.setAttributeNode(_att_fade);
+		
+			var _att_delay = document.createAttribute("data-delay");
+			_att_delay.value = "700";
+			_el_h2.setAttributeNode(_att_delay);
+
+			var _att_delay = document.createAttribute("class");
+			_att_delay.value = "fadeInUp animated";
+			_el_h2.setAttributeNode(_att_delay);
+
+			var _wolf_div = document.getElementById("wolf_div");
+			_wolf_div.appendChild(_el_h2);
+
+			//create p
+			var _el_p_1 = document.createElement("p");
+			var _text_node = document.createTextNode("is a set of C++ open source libraries for realtime rendering, streaming and game developing. We've created a high quality cloud gaming & streaming console that doesn't need any hardware, all it needs is internet.");
+			_el_p_1.appendChild(_text_node);
+			
+			var _att_fade = document.createAttribute("data-animate");
+			_att_fade.value = "fadeInUp";
+			_el_p_1.setAttributeNode(_att_fade);
+		
+			var _att_delay = document.createAttribute("data-delay");
+			_att_delay.value = "1000";
+			_el_p_1.setAttributeNode(_att_delay);
+
+			var _att_delay = document.createAttribute("class");
+			_att_delay.value = "d-none d-sm-block fadeInUp animated";
+			_el_p_1.setAttributeNode(_att_delay);
+
+			var _wolf_div = document.getElementById("wolf_div");
+			_wolf_div.appendChild(_el_p_1);
+
+			//play game button
+			var _el_a = document.createElement("a");
+			var _text_node = document.createTextNode("Play Sample Games");
+			_el_a.appendChild(_text_node);
+			
+			var _att_fade = document.createAttribute("data-animate");
+			_att_fade.value = "fadeInUp";
+			_el_a.setAttributeNode(_att_fade);
+		
+			var _att_delay = document.createAttribute("data-delay");
+			_att_delay.value = "1000";
+			_el_a.setAttributeNode(_att_delay);
+
+			var _att_ref = document.createAttribute("href");
+			_att_delay.value = "#";
+			_el_a.setAttributeNode(_att_delay);
+
+			var _att_delay = document.createAttribute("class");
+			_att_delay.value = "button button-border button-light button-rounded button-large noleftmargin nobottommargin d-none d-md-inline-block fadeInUp animated";
+			_el_a.setAttributeNode(_att_delay);
+
+			var _att_delay = document.createAttribute("style");
+			_att_delay.value = "margin-top: 5px;";
+			_el_a.setAttributeNode(_att_delay);
+
+			var _wolf_div = document.getElementById("wolf_div");
+			_wolf_div.appendChild(_el_a);
+		}
+	</script>
+</body>
+</html>
