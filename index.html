@@ -1,154 +1,189 @@
-<!DOCTYPE html>
-<html dir="ltr" lang="en-US">
-<head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="author" content="PooyaEimandar" />
-	<meta name="keywords" content="wolfengine, pooyaeimandar, cloud gaming, cloud streaming, google stadia, playpod, پویا ایماندار" />
-	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Raleway:300,400,500,600,700|Crete+Round:400i" rel="stylesheet" type="text/css" />
-	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
-	<link rel="stylesheet" href="style.css" type="text/css" />
-	<link rel="stylesheet" href="css/dark.css" type="text/css" />
-	<link rel="stylesheet" href="css/font-icons.css" type="text/css" />
-	<link rel="stylesheet" href="css/animate.css" type="text/css" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>Welcome to WolfEngine</title>
-</head>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="PooyaEimandar" />
+    <meta name="keywords" content="wolfengine, pooyaeimandar, cloud gaming, cloud streaming, google stadia, playpod, پویا ایماندار" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Raleway:300,400,500,600,700|Crete+Round:400i" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.theme.css" type="text/css" />
+    <link rel="stylesheet" href="css/animation.css" type="text/css" />
+    <link rel="stylesheet" href="css/font-icons.css" type="text/css" />
 
-<body class="stretched">
-	<div id="wrapper" class="clearfix">
-		<section id="slider" class="slider-element full-screen">
-			<div class="full-screen dark section nomargin noborder ohidden"> 
-				<div class="container clearfix">
-					<div id = "wolf_div" class="slider-caption slider-caption-center">
-					</div>
-				</div>
-				<div class="video-wrap">
-					<video id = "wolfvideo" poster="videos/explore.jpg" preload="auto" autoplay muted>
-						<source src='videos/barf.mp4' type='video/mp4' />
-						<source src='videos/explore.webm' type='video/webm' />
-					</video>
-					<div class="video-overlay" style="background-color: rgba(0,0,0,0.4);"></div>
-				</div>
-			</div>
-		</section>
-		<footer id="footer" class="dark">
-			<div id="copyrights">
-				<div class="container clearfix">
-					<div class="col_half">
-						<div><a>We are passionate about 3D Graphics Technology.</a></div>
-						Copyrights &copy; 2019 All Rights Reserved by <a href="https://PooyaEimandar.github.io">Pooya Eimandar</a>.<br>
-					</div>
+    <script type="application/javascript" src="lib/jquery-2.1.1.js"></script>
+    <script type="application/javascript" src="lib/bootstrap.rtl.min.js"></script>
+    <script type="application/javascript" src="lib/gamepad.js"></script>
+    <script type="application/javascript" src="lib/jquery.scrollTo.min.js"></script>
+    <script type="application/javascript" src="src/app.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Welcome to WolfEngine</title>
+  </head>
+  <body>
 
-					<div class="col_half col_last tright">
-						<div class="fright clearfix">
+    <div class="gc-main-container">
+      <div class="gc-content">
+        <div class="gc-intro-video-content">
+          <video autoplay muted>
+            <source src="res/mov/landscape.mp4">
+          </video>
+          <div class="gc-overlay"></div>
+        </div>
+        <div class="gc-tab-contents">
+          <section class="gc-tab-content gc-active gc-intro-section">
+            <div class="gc-inner-content">
+              <h2 class="gc-title">WOLF ENGINE</h2>
+              <p class="gc-description">
+                is a set of C++ open source libraries for realtime rendering, streaming and game developing. We've created a high quality cloud gaming & streaming console that doesn't need any hardware, all it needs is internet.
+              </p>
+            </div>
+          </section>
+          <section class="gc-tab-content gc-playout-section">
+            <div class="gc-inner-content">
+              <div class="gc-header">Play out</div>
+              <div class="gc-content">
+                <div class="gc-video-content">
+                  <iframe src="https://www.youtube.com/embed/EZSdEjBvuGY"
+                          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                          allowfullscreen></iframe>
+                  </iframe>
+                </div>
+              </div>
+              <div class="gc-footer">
+                <p>is a set of C++ open source libraries for realtime rendering </p>
+                <p>streaming and game developing. We've created a high quality cloud gaming & streaming console</p>
+                <p>that doesn't need any hardware, all it needs is internet.</p>
+              </div>
+            </div>
+          </section>
+          <section class="gc-tab-content gc-cloudgame-section">
+            <div class="gc-inner-content">
 
-							<a href="https://www.linkedin.com/in/pooyaeimandar/" class="social-icon si-small si-borderless si-linkedin">
-								<i class="icon-linkedin"></i>
-								<i class="icon-linkedin"></i>
-							</a>
+              <div class="gc-header">Cloud Game</div>
+              <div class="gc-content">
+                <div class="gc-game-content">
+                  <div class="gc-game-icon"></div>
+                </div>
+                <div class="gc-game-content">
+                  <div class="gc-game-icon"></div>
+                </div>
+                <div class="gc-game-content">
+                  <div class="gc-game-icon"></div>
+                </div>
+                <div class="gc-game-content">
+                  <div class="gc-game-icon"></div>
+                </div>
+                <div class="gc-game-content">
+                  <div class="gc-game-icon"></div>
+                </div>
+                <div class="gc-game-content">
+                  <div class="gc-game-icon"></div>
+                </div>
+              </div>
+              <div class="gc-footer">
+                <p>is a set of C++ open source libraries for realtime rendering </p>
+                <p>streaming and game developing. We've created a high quality cloud gaming & streaming console</p>
+                <p>that doesn't need any hardware, all it needs is internet.</p>
+              </div>
+            </div>
+          </section>
+          <section class="gc-tab-content gc-falcon-section">
+            <div class="gc-inner-content">
+              <div class="gc-header">Falcon Engine</div>
+              <div class="gc-content">
+                <div class="gc-video-content">
 
-							<a href="https://twitter.com/wolf_engine" class="social-icon si-small si-borderless si-twitter">
-								<i class="icon-twitter"></i>
-								<i class="icon-twitter"></i>
-							</a>
+                  <iframe src="https://www.youtube.com/embed/ygpz35ddZ_4"
+                          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                          allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="gc-footer">
+                <p>is a set of C++ open source libraries for realtime rendering </p>
+                <p>streaming and game developing. We've created a high quality cloud gaming & streaming console</p>
+                <p>that doesn't need any hardware, all it needs is internet.</p>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="gc-tab">
+          <section gc-show-page="gc-playout-section" class="gc-tab-section gc-pointer">
+            <div class="gc-inner-content">
+              <div class="gc-image-content">
+                <img class="gc-icon" src="./res/img/tv.svg">
+              </div>
+              <div class="gc-text-content">PlayOut</div>
+            </div>
+          </section>
+          <section gc-show-page="gc-cloudgame-section" class="gc-tab-section gc-pointer">
+            <div class="gc-inner-content">
+              <div class="gc-image-content">
+                <img class="gc-icon" src="./res/img/cloud_game.svg">
+              </div>
+              <div class="gc-text-content">Cloud Gaming</div>
+            </div>
+          </section>
+          <section gc-show-page="gc-falcon-section" class="gc-tab-section gc-pointer">
+            <div class="gc-inner-content">
+              <div class="gc-image-content">
+                <img class="gc-icon" src="./res/img/falcon.svg">
+              </div>
+              <div class="gc-text-content">Falcon</div>
+            </div>
+          </section>
+        </div>
 
-							<a href="https://github.com/WolfEngine" class="social-icon si-small si-borderless si-github">
-								<i class="icon-github"></i>
-								<i class="icon-github"></i>
-							</a>
+      </div>
+      <div class="gc-footer">
 
-							<a href="https://www.instagram.com/wolf_engine" class="social-icon si-small si-borderless si-instagram">
-								<i class="icon-instagram"></i>
-								<i class="icon-instagram"></i>
-							</a>
+        <div class="gc-left-section">
+          <div class="gc-icon">
+            <img src="./res/img/wolf.svg"/>
+          </div>
+          <div class="gc-content">
+            <div class="gc-up-section">We are passionate about 3D Graphics Technology.</div>
+            <div class="gc-down-section">Copyrights © 2019 All Rights Reserved by <a href="https://PooyaEimandar.github.io" target="_blank">Pooya Eimandar</a>. </div>
+          </div>
+        </div>
+        <div class="gc-right-section">
+          <div class="gc-social-contents">
 
-							<a href="https://www.youtube.com/channel/UC5XZoDB5YHd07WSWeMAYyZQ" class="social-icon si-small si-borderless si-youtube">
-								<i class="icon-youtube"></i>
-								<i class="icon-youtube"></i>
-							</a>
-			
-						</div>
-						<div class="clear"></div>
-						<i class="icon-envelope2"></i> pooya@BaziPardaz.onMicrosoft.com <span class="middot">&middot;</span> <i class="icon-skype2"></i> PooyaEimandar
-					</div>
-				</div>
-			</div>
-		</footer>
-	</div>
-	<script src="js/jquery.js"></script>
-	<script src="js/plugins.js"></script>
-	<script src="js/functions.js"></script>
-	<script type='text/javascript'>
-		document.getElementById('wolfvideo').addEventListener('ended', wolfvideo_handler, false);
-		function wolfvideo_handler(e) {
-			//create h2
-			var _el_h2 = document.createElement("h2");
-			var _text_node = document.createTextNode("Wolf Engine");
-			_el_h2.appendChild(_text_node);
-			
-			var _att_fade = document.createAttribute("data-animate");
-			_att_fade.value = "fadeInUp";
-			_el_h2.setAttributeNode(_att_fade);
-		
-			var _att_delay = document.createAttribute("data-delay");
-			_att_delay.value = "700";
-			_el_h2.setAttributeNode(_att_delay);
+            <a class="gc-social-icon gc-linkedin" target="_blank" href="https://www.linkedin.com/in/pooyaeimandar/">
+              <i class="icon-linkedin"></i>
+              <i class="icon-linkedin"></i>
+            </a>
 
-			var _att_delay = document.createAttribute("class");
-			_att_delay.value = "fadeInUp animated";
-			_el_h2.setAttributeNode(_att_delay);
+            <a class="gc-social-icon gc-twitter" target="_blank" href="https://twitter.com/wolf_engine" >
+              <i class="icon-twitter"></i>
+              <i class="icon-twitter"></i>
+            </a>
 
-			var _wolf_div = document.getElementById("wolf_div");
-			_wolf_div.appendChild(_el_h2);
+            <a class="gc-social-icon gc-github" target="_blank" href="https://github.com/WolfEngine" >
+              <i class="icon-github"></i>
+              <i class="icon-github"></i>
+            </a>
 
-			//create p
-			var _el_p_1 = document.createElement("p");
-			var _text_node = document.createTextNode("is a set of C++ open source libraries for realtime rendering, streaming and game developing. We've created a high quality cloud gaming & streaming console that doesn't need any hardware, all it needs is internet.");
-			_el_p_1.appendChild(_text_node);
-			
-			var _att_fade = document.createAttribute("data-animate");
-			_att_fade.value = "fadeInUp";
-			_el_p_1.setAttributeNode(_att_fade);
-		
-			var _att_delay = document.createAttribute("data-delay");
-			_att_delay.value = "1000";
-			_el_p_1.setAttributeNode(_att_delay);
+            <a class="gc-social-icon gc-instagram"  target="_blank" href="https://www.instagram.com/wolf_engine" >
+              <i class="icon-instagram"></i>
+              <i class="icon-instagram"></i>
+            </a>
 
-			var _att_delay = document.createAttribute("class");
-			_att_delay.value = "d-none d-sm-block fadeInUp animated";
-			_el_p_1.setAttributeNode(_att_delay);
+            <a class="gc-social-icon  gc-youtube" target="_blank " href="https://www.youtube.com/channel/UC5XZoDB5YHd07WSWeMAYyZQ" >
+              <i class="icon-youtube"></i>
+              <i class="icon-youtube"></i>
+            </a>
 
-			var _wolf_div = document.getElementById("wolf_div");
-			_wolf_div.appendChild(_el_p_1);
+          </div>
+          <div class="gc-contact-contents">
+            <i class="icon-envelope2"></i> pooya@BaziPardaz.onMicrosoft.com <span class="middot">·</span> <i class="icon-skype2"></i> PooyaEimandar
+          </div>
+        </div>
 
-			//play game button
-			var _el_a = document.createElement("a");
-			var _text_node = document.createTextNode("Play Sample Games");
-			_el_a.appendChild(_text_node);
-			
-			var _att_fade = document.createAttribute("data-animate");
-			_att_fade.value = "fadeInUp";
-			_el_a.setAttributeNode(_att_fade);
-		
-			var _att_delay = document.createAttribute("data-delay");
-			_att_delay.value = "1000";
-			_el_a.setAttributeNode(_att_delay);
+      </div>
+    </div>
 
-			var _att_ref = document.createAttribute("href");
-			_att_delay.value = "#";
-			_el_a.setAttributeNode(_att_delay);
+  </body>
 
-			var _att_delay = document.createAttribute("class");
-			_att_delay.value = "button button-border button-light button-rounded button-large noleftmargin nobottommargin d-none d-md-inline-block fadeInUp animated";
-			_el_a.setAttributeNode(_att_delay);
-
-			var _att_delay = document.createAttribute("style");
-			_att_delay.value = "margin-top: 5px;";
-			_el_a.setAttributeNode(_att_delay);
-
-			var _wolf_div = document.getElementById("wolf_div");
-			_wolf_div.appendChild(_el_a);
-		}
-	</script>
-</body>
+  <script >
+    new App();
+  </script>
 </html>
