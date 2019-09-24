@@ -3,6 +3,7 @@ function App() {
 
     function constructor() {
 
+
         initEvent();
 
         registerIntroVideoEndListener(function () {
@@ -15,6 +16,8 @@ function App() {
         });
 
         checkSize();
+
+        checkOrientation();
     }
 
     function checkSize() {
@@ -26,13 +29,28 @@ function App() {
         if (width < 500 &&width < height) {
             var $vid = $(".gc-intro-video-content video");
 
+            $vid.find("source").remove();
             $vid.attr("src", "./res/mov/portrait.mp4");
+            $vid[0].play();
         }
     }
 
     function registerIntroVideoEndListener(callback) {
         var $vid = $(".gc-intro-video-content video");
         $vid.on("ended", callback);
+
+        var canPlay = false;
+
+        function onVideoCanPlay(){
+            if(canPlay) return;
+            canPlay = true;
+
+            $(".gc-loading-content").hide();
+
+        }
+
+        $vid.on("canplay", onVideoCanPlay);
+        $vid.on("canplaythrough", onVideoCanPlay);
     }
 
     function initEvent() {
@@ -59,6 +77,24 @@ function App() {
                 .addClass("gc-page-out");
 
         });
+
+
+        window.addEventListener("orientationchange",checkOrientation, false);
+    }
+
+    function checkOrientation() {
+
+        var $content = $(".gc-orientation-message");
+
+        var orientation = window.screen.orientation ? window.screen.orientation.angle : window.orientation;
+
+        if (typeof orientation != "undefined") {
+            if (orientation !== 0) { // is not in portrait mode
+                $content.addClass("gc-show");
+            } else {
+                $content.removeClass("gc-show");
+            }
+        }
     }
 
 
