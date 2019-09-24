@@ -60,32 +60,66 @@ function App() {
         var width = $(window).width();
         var height = $(window).height();
 
-
-        if (width < 500 &&width < height) {
+        if (width < 500 && width < height) {
             var $vid = $(".gc-intro-video-content video");
 
-            $vid.find("source").remove();
             $vid.attr("src", "./res/mov/portrait.mp4");
+
             $vid[0].play();
         }
     }
 
     function registerIntroVideoEndListener(callback) {
-        var $vid = $(".gc-intro-video-content video");
+
+        var $container = $(".gc-intro-video-content");
+        var $vid = $container.find("video");
+
         $vid.on("ended", callback);
 
         var canPlay = false;
+        var suspend = false;
 
         function onVideoCanPlay(){
             if(canPlay) return;
             canPlay = true;
 
-            $(".gc-loading-content").hide();
+
+
+            setTimeout(function () {
+
+                if ($vid[0].paused) {
+                    $vid.remove();
+                    var $img = $container.find(".gc-background");
+
+                    var width = $(window).width();
+                    var height = $(window).height();
+
+                    if (width < 500 && width < height) {
+                        $img.attr("src", "./res/img/portrait.jpg");
+                    } else {
+                        $img.attr("src", "./res/img/landscape.jpg");
+                    }
+
+                    $img.addClass("gc-show");
+
+                    callback();
+                }
+                $(".gc-loading-content").hide();
+
+
+            }, 200);
 
         }
 
         $vid.on("canplay", onVideoCanPlay);
         $vid.on("canplaythrough", onVideoCanPlay);
+
+
+        // $vid[0].addEventListener("suspend", function(){
+        //
+        //     console.log("suspend");
+        //
+        // },false);
     }
 
     function initEvent() {
