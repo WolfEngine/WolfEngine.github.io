@@ -1,4 +1,3 @@
-//app
 function App() {
 
 
@@ -19,6 +18,41 @@ function App() {
         checkSize();
 
         checkOrientation();
+
+        initIframes();
+    }
+
+    function initIframes() {
+
+        var falconContent = '\
+            <iframe src="https://www.youtube.com/embed/ygpz35ddZ_4?autoplay=1&mute=1&enablejsapi=1"\
+                frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"\
+                allowfullscreen>\
+            </iframe>\
+        ';
+
+        var playoutContent = '\
+        <iframe src="https://www.youtube.com/embed/EZSdEjBvuGY?autoplay=1&mute=1&enablejsapi=1"\
+            frameborder="0" allow="accelerometer;encrypted-media; gyroscope; picture-in-picture"\
+            allowfullscreen>\
+        </iframe>\
+        ';
+
+
+        var $falcon = $(".gc-tab-contents .gc-falcon-section .gc-video-content");
+        var $playout = $(".gc-tab-contents .gc-playout-section .gc-video-content");
+
+        $falcon.append(falconContent);
+        $playout.append(playoutContent);
+
+
+        // $falcon.find("iframe").on("load", function () {
+        //     $falcon.find(".gc-overlay").hide();
+        // });
+        //
+        // $playout.find("iframe").on("load", function () {
+        //     $playout.find(".gc-overlay").hide();
+        // });
     }
 
     function checkSize() {
