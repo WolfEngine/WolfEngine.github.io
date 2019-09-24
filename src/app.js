@@ -72,9 +72,20 @@ function App() {
                 .removeClass("gc-page-out")
                 .addClass("gc-page-in gc-active");
 
+
             currentTabContent
                 .removeClass("gc-page-in gc-active")
                 .addClass("gc-page-out");
+
+            selectedTabContent.find("iframe").each(function(){
+                this.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+
+            });
+
+            currentTabContent.find("iframe").each(function(){
+                this.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+
+            });
 
         });
 
