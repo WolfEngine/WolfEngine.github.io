@@ -15,7 +15,7 @@
   ],
   "imageBaseUrl" : "http://wolfengine.app/res/img",
   "streamRequestUrl" : "http://fr.cloud.wolfengine.app/srv/runGame",
-  "androidMinimumVersion" : "0.9.9",
+  "androidMinimumVersion" : "2.1.2",
   "lives" : []
 
 }
