@@ -615,6 +615,9 @@ function App() {
 
     function openDownloadDialog() {
 
+    // <div class="gc-download-content">
+    //         <a class="gc-link" href="./res/file/WolfEngine.zip" target="_blank">PC App</a>
+    //     </div>
         var content = '\
             <div class="modal gc-download-dialog" tabindex="-1" role="dialog">\
                 <div class="modal-dialog" role="document">\
@@ -625,9 +628,6 @@ function App() {
                         <div class="modal-body">\
                             <div class="gc-download-content">\
                                 <a class="gc-link" href="./res/file/WolfEngine.apk" target="_blank">Android App</a>\
-                            </div>\
-                            <div class="gc-download-content">\
-                                <a class="gc-link" href="./res/file/WolfEngine.zip" target="_blank">PC App</a>\
                             </div>\
                         </div>\
                         <div class="modal-footer">\
