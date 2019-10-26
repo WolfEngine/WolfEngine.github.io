@@ -3,24 +3,35 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="author" content="PooyaEimandar" />
     <meta name="keywords" content="wolfengine, pooyaeimandar, cloud gaming, cloud streaming, google stadia, playpod, پویا ایماندار" />
+    <link rel="icon" type="image/png" href="res/img/favicon/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Raleway:300,400,500,600,700|Crete+Round:400i" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/bootstrap.rtl.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/video-js.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/video-js-skin.css" type="text/css" />
     <link rel="stylesheet" href="css/style.css" type="text/css" />
     <link rel="stylesheet" href="css/style.theme.css" type="text/css" />
     <link rel="stylesheet" href="css/animation.css" type="text/css" />
     <link rel="stylesheet" href="css/font-icons.css" type="text/css" />
+    <link rel="stylesheet" href="css/swiper.min.css" type="text/css" />
 
     <script type="application/javascript" src="lib/jquery-2.1.1.js"></script>
     <script type="application/javascript" src="lib/bootstrap.rtl.min.js"></script>
+    <script type="application/javascript" src="lib/swiper.min.js"></script>
+    <script type="application/javascript" src="lib/videojs.js"></script>
     <script type="application/javascript" src="lib/gamepad.js"></script>
     <script type="application/javascript" src="lib/jquery.scrollTo.min.js"></script>
-    <script type="application/javascript" src="src/app.js"></script>
+    <script type="application/javascript" src="src/share/Util.js"></script>
+    <script type="application/javascript" src="src/share/Const.js"></script>
+    <script type="application/javascript" src="src/stream/Stream.js"></script>
+    <script type="application/javascript" src="src/App.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Welcome to WolfEngine</title>
-
-
   </head>
-  <body>
+  <body class="gc-noselect">
+
+    <div class="gc-refresh-content gc-pointer">
+      <i class="icon icon-refresh"></i>
+    </div>
 
     <div class="gc-main-container">
       <div class="gc-content">
@@ -40,15 +51,31 @@
               </p>
             </div>
           </section>
+          <section class="gc-tab-content gc-live-section">
+            <div class="gc-inner-content">
+              <div class="gc-header">Live</div>
+              <div class="gc-content">
+                <div class="swiper-container">
+                  <div class="swiper-wrapper"></div>
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+              </div>
+              </div>
+              <div class="gc-footer">
+                <p>Here, you can watch live streams of games which are running on Wolf.Streamer</p>
+              </div>
+            </div>
+          </section>
           <section class="gc-tab-content gc-playout-section">
             <div class="gc-inner-content">
               <div class="gc-header">Wolf.PlayOut</div>
               <div class="gc-content">
-                <div class="gc-video-content"></div>
+                <div class="gc-iframe-content"></div>
               </div>
               <div class="gc-footer">
-                <p>This is an open platform for 3D real-time monitoring and simulation </p>
-                <p>powered by Wolf and developed for <a href="http://fanap.ir/" target="_blank">Fanap. Co</a></p>
+                <p>Wolf.Playout is the codename of TV broadcast playout automation software</p>
+                <p>which is optimized based MOS Protocol and is switchable between SD/HD/2K and 4K broadcasting formats</p>
               </div>
             </div>
           </section>
@@ -56,26 +83,7 @@
             <div class="gc-inner-content">
 
               <div class="gc-header">Cloud Gaming</div>
-              <div class="gc-content">
-                <div class="gc-game-content">
-                  <div class="gc-game-icon"></div>
-                </div>
-                <div class="gc-game-content">
-                  <div class="gc-game-icon"></div>
-                </div>
-                <div class="gc-game-content">
-                  <div class="gc-game-icon"></div>
-                </div>
-                <div class="gc-game-content">
-                  <div class="gc-game-icon"></div>
-                </div>
-                <div class="gc-game-content">
-                  <div class="gc-game-icon"></div>
-                </div>
-                <div class="gc-game-content">
-                  <div class="gc-game-icon"></div>
-                </div>
-              </div>
+              <div class="gc-content gc-scroll"></div>
               <div class="gc-footer">
                 <p>We've used this platform in order to launch</p>
                 <p>the first cloud gaming &amp; streaming project in Middle East namely <a href="https://play.pod.land" target="_blank">PlayPod.Land</a></p>
@@ -87,11 +95,11 @@
             <div class="gc-inner-content">
               <div class="gc-header">Project Falcon</div>
               <div class="gc-content">
-                <div class="gc-video-content"></div>
+                <div class="gc-iframe-content"></div>
               </div>
               <div class="gc-footer">
-                <p>Wolf.Playout is the codename of TV broadcast playout automation software</p>
-                <p>which is optimized based MOS Protocol and is switchable between SD/HD/2K and 4K broadcasting formats</p>
+                <p>This is an open platform for 3D real-time monitoring and simulation </p>
+                <p>powered by Wolf and developed for <a href="http://fanap.ir/" target="_blank">Fanap. Co</a></p>
               </div>
             </div>
           </section>
@@ -103,6 +111,14 @@
                 <img class="gc-icon" src="./res/img/tv.svg">
               </div>
               <div class="gc-text-content">PlayOut</div>
+            </div>
+          </section>
+          <section gc-show-page="gc-live-section" class="gc-tab-section gc-pointer">
+            <div class="gc-inner-content">
+              <div class="gc-image-content">
+                <img class="gc-icon" src="./res/img/live.svg">
+              </div>
+              <div class="gc-text-content">Live</div>
             </div>
           </section>
           <section gc-show-page="gc-cloudgame-section" class="gc-tab-section gc-pointer">
@@ -165,8 +181,18 @@
 
           </div>
           <div class="gc-contact-contents">
-            <span><i class="icon-envelope2">Pooya@WolfEngine.app</i> </span>
-            <span><i class="icon-skype2">PooyaEimandar</i> </span>
+            <span>
+              <a class="icon-envelope2"
+                 href="mailto://pooya@BaziPardaz.onMicrosoft.com"
+                 target="_blank">pooya@BaziPardaz.onMicrosoft.com
+              </a>
+            </span>
+            <span>
+              <a class="icon-skype2"
+                 href="https://join.skype.com/invite/R25HIAcOJUjE"
+                 target="_blank" >PooyaEimandar
+              </a>
+            </span>
           </div>
         </div>
 
@@ -189,8 +215,25 @@
         <img src="./res/mov/loading.gif">
       </div>
     </div>
-  </body>
 
+    <div class="gc-stream-container">
+
+      <div class="gc-inner-content">
+        <div class="gc-header">
+          <div class="gc-close-content"></div>
+        </div>
+        <div class="gc-content">
+
+        </div>
+        <div class="gc-footer"></div>
+      </div>
+    </div>
+
+    <div class="gc-snack-bar">
+      <div class="gc-text"></div>
+    </div>
+
+  </body>
   <script >
     new App();
   </script>

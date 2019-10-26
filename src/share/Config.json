@@ -1,0 +1,34 @@
+{
+  "games" : [
+    {
+      "gameId" : "20267",
+      "name" : "game_1"
+    },
+    {
+      "gameId" : "10252",
+      "name" : "game_2"
+    },
+    {
+      "gameId" : "24005",
+      "name" : "game_3"
+    }
+  ],
+  "imageBaseUrl" : "http://wolfengine.app/res/img",
+  "streamRequestUrl" : "http://fr.cloud.wolfengine.app/srv/runGame/srv/runGame",
+  "lives" : [
+    {
+      "hls" : "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
+      "dash" :  "https://bitmovin-a.akamaihd.net/content/playhouse-vr/mpds/105560.mpd"
+    },
+    {
+      "hls" : "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
+      "dash" :  "https://bitmovin-a.akamaihd.net/content/playhouse-vr/mpds/105560.mpd"
+    },
+    {
+      "hls" : "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
+      "dash" :  "https://bitmovin-a.akamaihd.net/content/playhouse-vr/mpds/105560.mpd"
+    }
+  ]
+
+}
+
