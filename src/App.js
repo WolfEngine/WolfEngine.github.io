@@ -54,18 +54,21 @@ function App() {
                 });
             }
 
-            // AccessCodeDialog();
-
-
         });
 
         _$snackBar = $("body > .gc-snack-bar");
 
         var uData = Utils.getUrlData(location.href);
 
-        if (uData && uData.protect === "true") {
-            _protectMode = true
+        if (uData) {
+            if (uData.protect === "true") {
+                _protectMode = true;
+            }
+            if (uData.download === "true") {
+                openDownloadDialog();
+            }
         }
+
 
     }
 
@@ -610,6 +613,40 @@ function App() {
         $(".gc-main-container >.gc-content >.gc-tab .gc-active").removeClass('gc-active');
     }
 
+    function openDownloadDialog() {
+
+        var content = '\
+            <div class="modal gc-download-dialog" tabindex="-1" role="dialog">\
+                <div class="modal-dialog" role="document">\
+                    <div class="modal-content">\
+                        <div class="modal-header">\
+                            <span>Download App</span>\
+                        </div>\
+                        <div class="modal-body">\
+                            <div class="gc-download-content">\
+                                <a class="gc-link" href="./res/file/WolfEngine.apk" target="_blank">Android App</a>\
+                            </div>\
+                            <div class="gc-download-content">\
+                                <a class="gc-link" href="./res/file/WolfEngine.zip" target="_blank">PC App</a>\
+                            </div>\
+                        </div>\
+                        <div class="modal-footer">\
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>\
+                        </div>\
+                    </div>\
+                </div>\
+            </div>\
+        ';
+
+        var $content = $(content);
+
+        $content.find("button.gc-accept").on("click", function () {
+
+        });
+
+        $content.modal({});
+    }
+
     function initEvent() {
 
         $(document.body).on("click","[gc-show-page]", function (e) {
@@ -622,12 +659,14 @@ function App() {
 
         });
 
-
         $(document.body).on("click",".gc-refresh-content", function (e) {
 
             location.reload();
         });
 
+        $(document.body).on("click",".gc-cloudgame-section .gc-header .gc-download", function () {
+            openDownloadDialog();
+        });
 
         window.addEventListener("orientationchange",checkOrientation, false);
 

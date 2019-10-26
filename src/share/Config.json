@@ -15,8 +15,21 @@
   ],
   "imageBaseUrl" : "http://wolfengine.app/res/img",
   "streamRequestUrl" : "http://fr.cloud.wolfengine.app/srv/runGame",
-  "androidMinimumVersion" : "2.1.2",
-  "lives" : []
+  "androidMinimumVersion" : "1.5.0",
+  "lives" : [
+    {
+      "hls" : "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
+      "dash" :  "https://bitmovin-a.akamaihd.net/content/playhouse-vr/mpds/105560.mpd"
+    },
+    {
+      "hls" : "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
+      "dash" :  "https://bitmovin-a.akamaihd.net/content/playhouse-vr/mpds/105560.mpd"
+    },
+    {
+      "hls" : "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
+      "dash" :  "https://bitmovin-a.akamaihd.net/content/playhouse-vr/mpds/105560.mpd"
+    }
+  ]
 
 }
 
