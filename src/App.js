@@ -182,7 +182,8 @@ function App() {
                         })
                     } else {
 
-                        var wsPrefix = isSiteSecure() ? "wss://" : "ws://";
+                        // var wsPrefix = isSiteSecure() ? "wss://" : "ws://";
+                        var wsPrefix = "ws://" ;
 
                         var result = res.result;
                         var streamData = {
