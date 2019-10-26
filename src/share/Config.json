@@ -14,7 +14,7 @@
     }
   ],
   "imageBaseUrl" : "http://wolfengine.app/res/img",
-  "streamRequestUrl" : "http://fr.cloud.wolfengine.app/srv/runGame/srv/runGame",
+  "streamRequestUrl" : "http://fr.cloud.wolfengine.app/srv/runGame",
   "lives" : [
     {
       "hls" : "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
