@@ -234,7 +234,7 @@ function App() {
         }
 
 
-        var url = _config.streamRequestUrl + "?gameID=" + 20267 + "&clientType=" + clientType;
+        var url = _config.streamRequestUrl + "?gameID=" + params.gameId + "&clientType=" + clientType;
 
         if (params.code) {
             url += ("&protectCode=" + params.code)
