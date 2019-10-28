@@ -1,16 +1,16 @@
 {
   "games" : [
     {
-      "gameId" : "20267",
-      "name" : "game_1"
+      "gameId" : "7614",
+      "name" : "Street of Rage Remake"
     },
     {
-      "gameId" : "10252",
-      "name" : "game_2"
+      "gameId" : "10341",
+      "name" : "Crash Bandicoot 3"
     },
     {
       "gameId" : "24005",
-      "name" : "game_3"
+      "name" : "Tekken 3"
     }
   ],
   "imageBaseUrl" : "http://wolfengine.app/res/img",
