@@ -1,9 +1,4 @@
 # WolfEngine.github.io
-The public repository of [Wolf Engine website](https://WolfEngine.app)
+The public repository of [Wolf Engine website](https://WolfEngine.github.io)
 
-# Special thanks goes to :
-* [Ali Khanbabaei](https://github.com/khanbabaeifanap)
-* [Hossein Goli](https://github.com/hg5899)
-* [Hamed Mehrali](https://github.com/mehralihamed)
-* [Fahime Zivdar](https://github.com/FahimeZivdar)
-
+# Special thanks goes to [PlayPod Team](https://PlayPod.cloud) team.
